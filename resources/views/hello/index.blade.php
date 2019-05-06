@@ -7,11 +7,17 @@
     </style>
 </head>
 <body>
-<h1>&#064;foreachでぃれくてぃぶの例</h1>
+<h1>&#064;forでぃれくてぃぶの例</h1>
 <ol>
-    @foreach($data as $item)
-        <li>{{$item}}
-    @endforeach
+    @for ($i = 1;$i < 100;$i++)
+        @if ($i % 2 == 1)
+            @continue
+        @elseif ($i <= 10)
+            <li>No, {{$i}}
+        @else
+            @break
+        @endif
+    @endfor
 </ol>
 </body>
 </html>
