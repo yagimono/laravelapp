@@ -7,16 +7,11 @@
     </style>
 </head>
 <body>
-<h1>Blade/Index</h1>
-@isset($msg)
-<p>こんにちは、{{$msg}}さん。</p>
-@else
-<p>何か書いてください。</p>
-@endif
-<form method="POST" action="/hello">
-    {{ csrf_field() }}
-    <input type="text" name="msg">
-    <input type="submit">
-</form>
+<h1>&#064;foreachでぃれくてぃぶの例</h1>
+<ol>
+    @foreach($data as $item)
+        <li>{{$item}}
+    @endforeach
+</ol>
 </body>
 </html>
