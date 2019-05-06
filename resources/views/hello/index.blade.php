@@ -17,16 +17,17 @@
     </style>
 </head>
 <body>
-<h1>&#064;forでぃれくてぃぶの例</h1>
-@foreach ($data as $item)
-    @if ($loop->first)
-        <p>※データ一覧</p>
-        <ul>
-            @endif
-            <li>No,{{$loop->iteration}} . {{$item}}</li>
-            @if ($loop->last)
-        </ul><p>----ここまで</p>
-    @endif
-@endforeach
+<h1>&#064;whileでぃれくてぃぶの例</h1>
+<ol>
+    @php
+    $counter = 0;
+    @endphp
+    @while ($counter < count($data))
+    <li>{{$data[$counter]}}</li>
+    @php
+    $counter++;
+    @endphp
+    @endwhile
+</ol>
 </body>
 </html>
