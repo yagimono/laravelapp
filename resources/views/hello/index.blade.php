@@ -11,7 +11,8 @@
     <p>ここが本文のコンテンツです。</p>
     <p>必要なだけ記述できます。</p>
 
-    @each('components.item', $data, 'item')
+    <p>Controller value<br>'message' = {{$message}}</p>
+    <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
 @endsection
 
 @section('footer')
